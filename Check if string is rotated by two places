@@ -35,7 +35,7 @@
     if(str1==str2)
     return true;
     
-    rotate(A.rbegin(),A.rbegin()+2,A.rend());
+    rotate(newStr.rbegin(),newStr.rbegin()+2,newStr.rend());
     if(newStr==str2)
     return true;
     return false;
