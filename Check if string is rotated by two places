@@ -1,0 +1,42 @@
+   //Your code here
+   
+   First method which is not passing all the test cases.( failing the reverse string rotation )
+    //   int n=str2.size();
+    //   int j=0;
+    //   for(int i=2;i<str1.size();i++)
+    //   {
+    //       if(str2[j]!=str1[i])
+    //       {
+    //           return 0;
+    //       }
+    //       j++;
+    //   }
+      
+    //   //To compare the left over characters of the string 2 and string 1
+    //  int k=0;
+    
+    //      while(k<=1 && j<n)
+    //      {
+    //         if(str2[j]!=str1[k])
+    //         {
+    //             return 0;
+    //         }
+    //         k++;
+    //         j++;
+    //      }
+     
+    //  return 1;
+    // }
+    
+    //Used rotate function to return the rotation of string by 2 places which worked accurately.
+    Space complexity=O(1) and Time-complexity= O(n)
+    string A=str1;
+    rotate(str1.begin(),str1.begin()+2,str1.end());
+    if(str1==str2)
+    return true;
+    
+    rotate(A.rbegin(),A.rbegin()+2,A.rend());
+    if(A==str2)
+    return true;
+    return false;
+    }
