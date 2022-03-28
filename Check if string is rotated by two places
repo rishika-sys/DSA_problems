@@ -30,13 +30,13 @@
     
     //Used rotate function to return the rotation of string by 2 places which worked accurately.
     Space complexity=O(1) and Time-complexity= O(n)
-    string A=str1;
+    string newStr=str1;
     rotate(str1.begin(),str1.begin()+2,str1.end());
     if(str1==str2)
     return true;
     
     rotate(A.rbegin(),A.rbegin()+2,A.rend());
-    if(A==str2)
+    if(newStr==str2)
     return true;
     return false;
     }
