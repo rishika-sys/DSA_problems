@@ -1,1 +1,4 @@
-# DSA_problems
+# DSA-Problems
+
+This is my repository to practice problems of DSA.
+
