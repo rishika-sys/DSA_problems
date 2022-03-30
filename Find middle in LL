@@ -1,0 +1,49 @@
+ int getMiddle(Node *head)
+    {
+        //Your code here
+        
+        ********************Approach 1*******************************
+      
+      // Node *temp=head;
+        // int count=1;
+        // // int x=1;
+        // while(temp->next!=NULL)
+        // {
+        //      count++;
+        //     temp=temp->next;
+           
+        // }
+        
+        // Node *temp1=head;
+         
+        //   int x=count/2;
+          
+        //     if(count%2==0)
+        //     {
+        //         for(int i=0;i<x;i++)
+        //         temp1=temp1->next;
+            
+        //     return temp1->data;
+        //     }
+        //     if(count%2!=0)
+        //     {
+        //         for(int i=0;i<x;i++)
+        //         temp1=temp1->next;
+            
+        //     return temp1->data;
+        //     }
+        // }
+        
+        // *****************************************Approach 2**************************************************************
+        // SLOW AND FAST POINTER
+         Node* slow=head;
+         Node* fast=head;
+         while(fast!=NULL && fast->next!=NULL)
+         {
+             fast=fast->next->next;
+             slow=slow->next;
+             
+         }
+        
+    return slow->data;
+    }
