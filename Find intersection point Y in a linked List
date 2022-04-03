@@ -20,3 +20,28 @@ int intersectPoint(Node* head1, Node* head2)
     }
 
 }
+
+Time-complexity=O(n*m).
+
+****************Better solution is using hashing with time-complexity=O(n+m) and space-comp=O(n)******************
+
+int intersectPoint(Node* head1, Node* head2)
+{
+    unordered_set<Node*> s;
+    while(head1!=NULL )
+    {
+        s.insert(head1);
+        head1=head1->next;
+    }
+    while(head2!=NULL)
+    {
+        if(s.find(head2)!=s.end())
+        {
+            return head2->data;
+        }
+        head2=head2->next;
+            
+    }
+ }
+    
+    
