@@ -1,0 +1,23 @@
+    struct node *reverse (struct node *head, int k)
+    { 
+        // Complete this method
+        //Simply calculate the reverse using loops
+        node *curr=head;
+        node *prev=NULL;
+        node *nex;
+        int count=0;
+        while(count<k && curr!=NULL)
+        {
+            nex=curr->next;
+            curr->next=prev;
+            prev=curr;
+            curr=nex;
+            count++;
+        }
+        
+        if(nex!=NULL)          //now we will calculate reverse from nex to k recursively.
+        {
+            head->next=reverse(nex, k);
+        }
+        return prev;
+    }
