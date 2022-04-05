@@ -1,0 +1,16 @@
+int remove_duplicate(int a[],int n){
+        // code here
+        int k=0;
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]!=a[i+1])
+            {
+                a[k]=a[i];
+                k++;
+            }
+            
+        }
+        return k;
+        
+    }
+    complexity=O(n);
