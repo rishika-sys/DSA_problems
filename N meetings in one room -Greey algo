@@ -1,0 +1,35 @@
+ public:
+    //Function to find the maximum number of meetings that can
+    //be performed in a meeting room.
+    
+    struct meetings{
+        int st;
+        int end;
+    };
+    static bool comparator(struct meetings m1,meetings m2)
+    {
+        return m1.end < m2.end;   
+    }
+    int maxMeetings(int start[], int end[], int n)
+    {
+        // Your code here
+        int count=0;
+        struct meetings meet[n];
+        for(int i=0;i<n;i++)
+        {
+            meet[i].st=start[i];meet[i].end=end[i];
+           
+        }
+        sort(meet, meet+n, comparator); //function calling
+        int limit=meet[0].end;
+        count++;
+        for(int i=0;i<n;i++)
+        {
+            if(meet[i].st>limit)
+            {
+                limit=meet[i].end;
+                count++;
+            }
+        }
+        return count;
+    }
