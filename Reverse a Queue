@@ -1,0 +1,12 @@
+//Function to reverse the queue using recursion.
+struct Queue* rev(struct Queue* Q)
+{
+    //code here
+    if(Q->size==1)
+    return Q;
+    int last=front(Q);
+    dequeue(Q);
+    struct Queue* newQue=rev(Q);
+    enqueue(newQue,last);
+    return newQue;
+}
