@@ -1,0 +1,25 @@
+void reverseStack(stack<int> &s, stack<int> &tmp_stack) {
+
+  if(s.empty() || s.size()==1) //Base case
+  {
+    return;
+  }
+  int lastElement=s.top();
+  s.pop();
+  reverseStack(s,tmp_stack);
+  
+  //store the value in the temporary stack
+  while(!s.empty())
+  {
+      tmp_stack.push(s.top());
+      s.pop();
+  }
+ 
+  s.push(lastElement); //for last element.
+   //then finally transfer it to the previous stack as the return type is void.
+  while(!tmp_stack.empty())
+  {
+         s.push(tmp_stack.top());
+        tmp_stack.pop();
+  }
+}
