@@ -12,6 +12,7 @@
         //code here
         int carry=0;
         
+        //Nodes needs to be reversed because we need to add element from the right end.
         first =reverse(first);
         second=reverse(second);
         int sum=first->data+ second->data;
