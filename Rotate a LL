@@ -12,9 +12,6 @@
             count++;
         }
        temp->next=head;
-    //   k=k%count; //if k>len
-    //   k=k%count;
-    //   k=count-k;
        k=min(count,k);              //Since we are only taking till k.
        while(k--)
        temp =temp->next;
