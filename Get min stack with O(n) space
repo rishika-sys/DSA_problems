@@ -29,6 +29,7 @@ class Solution{
            if(x==ss.top())
            {
                ss.pop();
+               s.pop();
            }
            return x;
            
