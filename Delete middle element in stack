@@ -1,0 +1,25 @@
+void deleteMid(stack<int>&s, int sizeOfStack)
+    {
+        // code here.. 
+        stack<int> out;
+        int count=0;
+        while(count<sizeOfStack/2)
+        {
+            // int val=s.top();
+            
+        
+                out.push(s.top());
+                s.pop();
+                
+            
+               count++;
+           
+        }
+        s.pop();
+        cout<<count<<endl;
+        while(!out.empty())
+        {
+            s.push(out.top());
+            out.pop();
+        }
+    }
