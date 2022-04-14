@@ -1,0 +1,19 @@
+    This is the order of O(n2) solution.(Brute-force)
+    
+    vector <int> max_of_subarrays(int *arr, int n, int k)
+    {
+        //your code here
+        
+        vector<int> ans;
+        int maxi=INT_MIN;
+        for(int i=0;i<n-k+1;i++)
+        {
+            maxi=0;
+            for(int j=i;j<i+k;j++)
+            {
+                maxi=max(arr[j],maxi);
+            }
+            ans.push_back(maxi);
+        }
+        return ans;
+    }
