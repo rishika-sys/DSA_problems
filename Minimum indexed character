@@ -1,0 +1,34 @@
+ int minIndexChar(string str, string patt)
+    {
+        //Your code here
+        
+        // -------------This is a brute-force approach O(n2)---------
+        int n=str.length();
+        int m=patt.length();
+         for(int i=0;i<n;i++)
+         {
+             for(int j=0;j<m;j++)
+             {
+                 if(str[i]==patt[j])
+                 {
+                     return i;
+                 }
+             }
+         }
+      -------------------Map stl o(N)------------------------------------------------
+        unordered_map <char,int> mp;
+        for(int i=0;i<m;i++)
+        {
+            mp[patt[i]]++;// mp->second kuch bhi daalo it won't matter cuz its required.
+        }
+     
+        for(int i=0;i<n;i++)
+        {
+            if(mp.find(str[i])!=mp.end())
+            {
+                return i;
+                
+            }
+        }
+        return -1;
+    }
