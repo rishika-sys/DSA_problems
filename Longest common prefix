@@ -1,0 +1,27 @@
+string longestCommonPrefix (string arr[], int n)
+    {
+        // your code here
+        string str;
+        sort(arr,arr+n); ///This sorts the string alphabetically.
+        string a=arr[0];
+        string b=arr[n-1];
+        int len=min(a.length(),b.length());
+        
+        // for(int i=0;i<n;i++)
+        // cout<<arr[i]<<" ";
+        
+        for(int i=0;i<len;i++)
+        {
+            if(a[i]=b[i])
+            {
+                str+=b[i];
+            }
+            else
+            break;
+             
+        }
+        if(str.size()>0)
+        return str;
+        else
+        return "-1";
+    }
