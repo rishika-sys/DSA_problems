@@ -2,7 +2,7 @@ string longestCommonPrefix (string arr[], int n)
     {
         // your code here
         string str;
-        sort(arr,arr+n); ///This sorts the string alphabetically.
+        sort(arr,arr+n); ///This sorts the string alphabetically also length wise.
         string a=arr[0];
         string b=arr[n-1];
         int len=min(a.length(),b.length());
