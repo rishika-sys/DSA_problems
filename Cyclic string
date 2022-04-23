@@ -11,18 +11,19 @@
         //     i++;
         // }
         // return 0;
+        
+        *****************2nd method**************************
         if(s1.length()!=s2.length())
         {
-        return false;
+          return false;
         }
         else
         {
-        string s=s1+s2;
-        if(s.find(s2)!=string::npos)//this string ::npos indicates till end of the string
-        return true;
+          string s=s1+s2;
+          if(s.find(s2)!=string::npos)//this string ::npos indicates till end of the string
+          return true;
         }
-    // }
+
     return false;
-        
-        // return 0;
+   
     }
