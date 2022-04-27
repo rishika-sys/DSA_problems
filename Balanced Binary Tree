@@ -1,0 +1,24 @@
+ int heightOfTree(Node* root)
+    {
+        if(root==NULL)
+        return 0;
+        
+        int leftH=heightOfTree(root->left);
+        int rightH=heightOfTree(root->right);
+        
+        return max(leftH,rightH)+1;
+    }
+    bool isBalanced(Node *root)
+    {
+        if(root==NULL)
+        return true;
+        if(root->left==NULL && root->right==NULL)
+        return true;
+       int x=heightOfTree(root->left);
+       int y=heightOfTree(root->right);
+     
+       if(abs(x-y)<=1 && isBalanced(root->left) && isBalanced(root->right))
+       return true;
+       return false;
+       
+    }
