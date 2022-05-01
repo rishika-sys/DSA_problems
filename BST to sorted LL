@@ -1,0 +1,29 @@
+Node<int>* constructBST(BinaryTreeNode<int>* root) {
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Return output and don't print it.
+     * Taking input and printing output is handled automatically.
+     */
+    if(root==NULL)
+    {
+        return NULL;
+    }
+    Node<int>* newnode=new Node<int>(root->data);
+    Node<int>* head=constructBST(root->left);
+    Node<int>* head1=constructBST(root->right);
+    newnode->next=head1;
+    Node<int>* temp=head;
+    if(temp!=NULL)
+    {
+        while(temp->next!=NULL)
+        {
+            temp=temp->next;
+
+        }
+        temp->next=newnode;
+    }
+    else
+    head=newnode;
+    return head;
+    
+}
