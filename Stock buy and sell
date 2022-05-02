@@ -1,0 +1,17 @@
+vector<vector<int> > stockBuySell(vector<int> arr, int n){
+        //code here
+       
+        vector<vector<int>> ans;
+        for(int i=1;i<n;i++)
+        {
+                if(arr[i]>arr[i-1])
+                {
+                    vector<int> vec;
+                    vec.push_back(i-1);
+                    vec.push_back(i);
+                    ans.push_back(vec);
+                }
+              
+        }
+         return ans;
+    }
